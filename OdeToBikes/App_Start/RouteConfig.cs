@@ -13,6 +13,11 @@ namespace OdeToBikes
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // allow searching by BicycleType without creating a controller for each
+            routes.MapRoute("BicycleType",
+                "BicycleType/{type}",
+                new { Controller = "BicycleType", action = "Search", type = UrlParameter.Optional });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
