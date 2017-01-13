@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace OdeToBikes.Controllers
 {
-    public class ModelsController : Controller
+    public class MModelsController : Controller
     {
         // GET: Models
         public ActionResult Index()
@@ -50,23 +50,23 @@ namespace OdeToBikes.Controllers
         // GET: Models/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var model = _models.Single(m => m.Id == id);
+
+            return View(model);
         }
 
         // POST: Models/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
-            try
-            {
-                // TODO: Add update logic here
+            var model = _models.Single(m => m.Id == id);
 
+            // 
+            if (TryUpdateModel(model))
+            {
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(model);
         }
 
         // GET: Models/Delete/5
