@@ -24,3 +24,16 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.model {
+    padding: 2px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.model h4{
+    color: #ffffff;
+    padding: 5px;
+    background: #ff5e32;
+    text-shadow: 8px 4px 4px #333;
+}
