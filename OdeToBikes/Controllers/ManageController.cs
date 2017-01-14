@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using OdeToBikes.Models;
 
-namespace OdeToBikes.Controllers
+namespace OdeToBikes.Models
 {
     [Authorize]
     public class ManageController : Controller

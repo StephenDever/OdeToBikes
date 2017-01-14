@@ -30,8 +30,8 @@ C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Owin.dll
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\OdeToBikes.pdb
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Newtonsoft.Json.xml
@@ -47,8 +47,8 @@ C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\obj\Debug\OdeToBikes.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes.Tests\obj\Debug\OdeToBikes.Tests.dll

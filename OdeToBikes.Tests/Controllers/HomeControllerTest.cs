@@ -5,7 +5,7 @@ using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OdeToBikes;
-using OdeToBikes.Controllers;
+using OdeToBikes.Models;
 
 namespace OdeToBikes.Tests.Controllers
 {

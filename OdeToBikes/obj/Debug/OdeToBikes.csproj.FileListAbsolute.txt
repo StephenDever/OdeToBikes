@@ -133,6 +133,6 @@ C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\bin\Microsoft.Ow
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.csprojResolveAssemblyReference.cache
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.dll
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.pdb
-C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.csprojResolveAssemblyReference.cache
