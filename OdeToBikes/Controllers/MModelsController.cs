@@ -1,122 +1,70 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.Web.Mvc;
+﻿using OdeToBikes.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
-//namespace OdeToBikes.Models
-//{
-//    public class MModelsController : Controller
-//    {
-//        // GET: Models
-//        public ActionResult Index()
-//        {
-//            var model =
-//                from m in _models
-//                orderby m.Year descending
-//                select m;
+namespace OdeToBikes.Models
+{
+    public class MModelsController : Controller
+    {
+        OdeToBikesDb _db = new OdeToBikesDb();
+        // GET: Models
+        public ActionResult Index([Bind(Prefix="id")] int manufacturerId)
+        {
+            var manufacturer = _db.Manufacturers.Find(manufacturerId);
+            if (manufacturer != null)
+            {
+                return View(manufacturer);
+            }
+            return HttpNotFound();
+        }
 
-//            return View(model);
-//        }
+        [HttpGet]
+        public ActionResult Create(int manufacturerId)
+        {
+            return View();
+        }
 
-//        // GET: Models/Details/5
-//        public ActionResult Details(int id)
-//        {
-//            return View();
-//        }
+        [HttpPost]
+        public ActionResult Create(ManufacturerModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // creates a new _db entry
+                _db.Models.Add(model);
+                _db.SaveChanges();
+                return RedirectToAction("Index", new { id = model.ManufacturerId });
+            }
+            return View(model);
+        }
 
-//        // GET: Models/Create
-//        public ActionResult Create()
-//        {
-//            return View();
-//        }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var model = _db.Models.Find(id);
+            return View(model);
+        }
 
-//        // POST: Models/Create
-//        [HttpPost]
-//        public ActionResult Create(FormCollection collection)
-//        {
-//            try
-//            {
-//                // TODO: Add insert logic here
+        [HttpPost]
+        public ActionResult Edit(ManufacturerModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // takes a _db entry and sets it to be modifiable 
+                _db.Entry(model).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index", new { id = model.ManufacturerId});
+            }
+            return View(model);
+        }
 
-//                return RedirectToAction("Index");
-//            }
-//            catch
-//            {
-//                return View();
-//            }
-//        }
-
-//        // GET: Models/Edit/5
-//        public ActionResult Edit(int id)
-//        {
-//            var model = _models.Single(m => m.Id == id);
-
-//            return View(model);
-//        }
-
-//        // POST: Models/Edit/5
-//        [HttpPost]
-//        public ActionResult Edit(int id, FormCollection collection)
-//        {
-//            var model = _models.Single(m => m.Id == id);
-
-//            if (TryUpdateModel(model))
-//            {
-//                return RedirectToAction("Index");
-//            }
-//            return View(model);
-//        }
-
-//        // GET: Models/Delete/5
-//        public ActionResult Delete(int id)
-//        {
-//            return View();
-//        }
-
-//        // POST: Models/Delete/5
-//        [HttpPost]
-//        public ActionResult Delete(int id, FormCollection collection)
-//        {
-//            try
-//            {
-//                // TODO: Add delete logic here
-
-//                return RedirectToAction("Index");
-//            }
-//            catch
-//            {
-//                return View();
-//            }
-//        }
-
-//        static List<ManufacturerModel> _models = new List<ManufacturerModel>
-//        {
-//            new ManufacturerModel
-//            {
-//                Id =1,
-//                Manufacturer = "Specialized",
-//                Model = "Sirrus",
-//                Year = 1991,
-//                Info = ""
-//            },
-//            new ManufacturerModel
-//            {
-//                Id =2,
-//                Manufacturer = "Miyata",
-//                Model = "912",
-//                Year = 1981,
-//                Info = ""
-//            },
-//            new ManufacturerModel
-//            {
-//                Id =3,
-//                Manufacturer = "Nishiki",
-//                Model = "Prestige",
-//                Year = 1986,
-//                Info = ""
-//            }
-//        };
-//    }
-
-//}
+        protected override void Dispose(bool disposing)
+        {
+            _db.Dispose();
+            base.Dispose(disposing);
+        }
+    }
+}

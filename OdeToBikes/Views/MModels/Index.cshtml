@@ -1,0 +1,14 @@
+﻿@model OdeToBikes.Models.Manufacturer
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Models for @Model.Name</h2>
+
+@Html.Partial("_Models", Model.Models)
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { manufacturerId = Model.Id})
+</p>
+
