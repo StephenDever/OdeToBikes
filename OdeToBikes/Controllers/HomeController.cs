@@ -9,9 +9,19 @@ namespace OdeToBikes.Models
     public class HomeController : Controller
     {
         OdeToBikesDb _db = new OdeToBikesDb();
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm = null)
         {
-            var model = _db.Manufacturers.ToList();
+            var model =
+                from m in _db.Manufacturers
+                orderby m.Name
+                where searchTerm == null || m.Name.StartsWith(searchTerm)
+                select new ManufacturerListViewModel
+                {
+                    Id = m.Id,
+                    Name = m.Name,
+                    Location = m.Location,
+                    CountOfModels = m.Models.Count()
+                };
 
             return View(model);
         }

@@ -168,7 +168,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Migrations\201701190146001_InitialCreate.cs" />
+    <Compile Include="Migrations\201701190146001_InitialCreate.Designer.cs">
+      <DependentUpon>201701190146001_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\ManufacturerListViewModel.cs" />
     <Compile Include="Models\ManufacturerModel.cs" />
     <Compile Include="Controllers\BicycleTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -254,6 +260,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701190146001_InitialCreate.resx">
+      <DependentUpon>201701190146001_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

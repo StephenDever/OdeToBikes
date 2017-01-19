@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OdeToBikes.Models.Manufacturer>
+﻿@model IEnumerable<OdeToBikes.Models.ManufacturerListViewModel>
 
 @{
     ViewBag.Title = "Home Page";
@@ -10,11 +10,18 @@
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
+<form method="get">
+    @* using method="get" (read operation) puts the searchTerm in the query string, 
+        rather than using "post" (write operation), where it gets put into the HTTP message body *@
+    <input type="search" name="searchTerm"/>
+    <input type="submit" value="Search By Manufacturer" />
+</form>
 @foreach (var item in Model)
 {
     <div>
         <h4>@item.Name</h4>
-        <div>@item.Location, @item.Models</div>
+        <div>@item.Location</div>
+        <div>Models: @item.CountOfModels</div>
         <hr/>
     </div>
 }

@@ -136,3 +136,5 @@ C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\bin\Microsoft.Ow
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.csprojResolveAssemblyReference.cache
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.dll
 C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.pdb
+C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.Migrations.InitialCreate.resources
+C:\Users\Student\Source\Repos\StephenDever.Github.io\OdeToBikes\obj\Debug\OdeToBikes.csproj.GenerateResource.Cache
