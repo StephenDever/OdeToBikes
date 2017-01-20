@@ -49,6 +49,7 @@ namespace OdeToBikes.Models
         }
 
         [HttpPost]
+        // Bind exclude name, so people can't change the model name once created
         public ActionResult Edit(ManufacturerModel model)
         {
             if (ModelState.IsValid)
