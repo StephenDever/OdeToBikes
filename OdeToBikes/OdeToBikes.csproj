@@ -257,6 +257,7 @@
     <Content Include="Views\MModels\_Models.cshtml" />
     <Content Include="Views\MModels\Create.cshtml" />
     <Content Include="Views\MModels\Edit.cshtml" />
+    <Content Include="Views\Home\_Manufacturers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

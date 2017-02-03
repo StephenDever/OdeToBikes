@@ -23,6 +23,11 @@ namespace OdeToBikes.Models
                     CountOfModels = m.Models.Count()
                 };
 
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_Manufacturers", model);
+            }
+
             return View(model);
         }
 
